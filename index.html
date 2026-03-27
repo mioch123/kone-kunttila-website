@@ -1,0 +1,1287 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <title>Konepaja Turku — Metallitöitä & Koneenrakennusta | Kone-Kunttila Oy</title>
+  <meta name="description" content="Kone-Kunttila Oy on ISO 9001 -sertifioitu konepaja Turussa. CNC-koneistus, hitsaus, automatisoinnit ja koneenrakennus vuodesta 1999.">
+  <meta name="keywords" content="konepaja Turku, CNC-koneistus, metallialan alihankinta, hitsaus rakennetyöt, automatisointi, koneenrakennus Turku">
+  <link rel="canonical" href="https://www.kone-kunttila.fi">
+
+  <!-- OG -->
+  <meta property="og:title" content="Kone-Kunttila Oy — Konepaja Turku">
+  <meta property="og:description" content="ISO 9001 -sertifioitu konepaja. Metallitöitä, automatisointeja ja koneenrakennusta Turussa vuodesta 1999.">
+  <meta property="og:url" content="https://www.kone-kunttila.fi">
+  <meta property="og:type" content="website">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Kone-Kunttila Oy",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rykmentintie 4",
+      "addressLocality": "Turku",
+      "postalCode": "20810",
+      "addressCountry": "FI"
+    },
+    "telephone": "+358400538520",
+    "email": "info@kone-kunttila.fi",
+    "url": "https://www.kone-kunttila.fi",
+    "openingHours": "Mo-Fr 07:00-15:30",
+    "foundingDate": "1999",
+    "hasCredential": "ISO 9001"
+  }
+  </script>
+
+  <style>
+    /* ── Reset ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    /* ── Design Tokens ── */
+    :root {
+      --bg:       #FFFFFF;
+      --bg-off:   #F0F0F0;
+      --text:     #333333;
+      --muted:    #666666;
+      --orange:   #F29100;
+      --blue:     #009FE3;
+      --border:   #CCCCCC;
+      --shadow:      8px  8px 0px 0px rgba(51,51,51,0.10);
+      --shadow-lg:  12px 12px 0px 0px rgba(51,51,51,0.15);
+      --font-display: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      --font-body:    "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono:    "JetBrains Mono", "SF Mono", Consolas, monospace;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* ── Layout ── */
+    .container {
+      width: 100%;
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0 4rem;
+    }
+
+    .meta-text {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--muted);
+    }
+
+    /* ── Section ── */
+    section { padding: 7rem 0; }
+
+    .section-header {
+      margin-bottom: 4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      border-bottom: 2px solid var(--text);
+      padding-bottom: 1rem;
+    }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      text-transform: uppercase;
+      line-height: 1;
+      margin-top: 0.35rem;
+    }
+
+    /* ── Buttons ── */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--orange);
+      color: #fff;
+      padding: 1.125rem 2.25rem;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      box-shadow: var(--shadow);
+      transition: all 0.2s ease;
+      border: 2px solid var(--orange);
+    }
+    .btn-primary:hover { transform: translate(-3px,-3px); box-shadow: var(--shadow-lg); }
+
+    .btn-secondary {
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      border-bottom: 1px solid var(--text);
+      padding-bottom: 0.2rem;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .btn-secondary:hover { color: var(--blue); border-color: var(--blue); }
+
+    /* ─────────────────── HEADER ─────────────────── */
+    header {
+      position: fixed;
+      top: 0; width: 100%;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      z-index: 100;
+      height: 80px;
+      display: flex;
+      align-items: center;
+    }
+    .nav-container { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+    .logo { font-family: var(--font-display); font-weight: 900; font-size: 1.4rem; letter-spacing: -0.04em; }
+    .logo-mark { color: var(--blue); }
+
+    nav ul { display: flex; list-style: none; gap: 2rem; align-items: center; }
+    nav a { font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; padding: 0.4rem 0; transition: color 0.2s; }
+    nav a:hover { color: var(--orange); }
+
+    .nav-cta {
+      background: var(--text); color: #fff;
+      padding: 0.65rem 1.25rem;
+      font-weight: 700; font-size: 0.75rem;
+      font-family: var(--font-display);
+      text-transform: uppercase; letter-spacing: 0.06em;
+      box-shadow: 4px 4px 0px 0px var(--orange);
+      transition: all 0.2s;
+    }
+    .nav-cta:hover { transform: translate(-2px,-2px); box-shadow: 6px 6px 0px 0px var(--orange); color: #fff; }
+
+    /* ── Hamburger ── */
+    .hamburger-btn { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 0.5rem; }
+    .hamburger-btn span { display: block; width: 22px; height: 2px; background: var(--text); transition: all 0.3s; }
+
+    /* ── Mobile Drawer ── */
+    .mobile-drawer {
+      position: fixed; top: 0; right: 0; bottom: 0;
+      width: 300px; background: var(--text);
+      padding: 5rem 2.5rem 2.5rem;
+      z-index: 90;
+      transform: translateX(100%);
+      transition: transform 0.32s cubic-bezier(0.22,1,0.36,1);
+      display: flex; flex-direction: column;
+    }
+    .mobile-drawer.open { transform: translateX(0); }
+    .mobile-drawer nav ul { flex-direction: column; gap: 0; }
+    .mobile-drawer nav li { border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .mobile-drawer nav a { display: block; color: rgba(255,255,255,0.7); padding: 1rem 0; font-size: 0.9rem; }
+    .mobile-drawer nav a:hover { color: var(--orange); }
+    .mob-cta-wrap { margin-top: auto; padding-top: 2rem; }
+    .mob-cta-wrap .nav-cta { display: block; text-align: center; }
+
+    .menu-overlay {
+      position: fixed; inset: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 80; opacity: 0; pointer-events: none;
+      transition: opacity 0.3s;
+    }
+    .menu-overlay.open { opacity: 1; pointer-events: auto; }
+
+    /* ─────────────────── HERO ─────────────────── */
+    .hero {
+      padding-top: 140px;
+      padding-bottom: 6rem;
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 2rem;
+      align-items: center;
+      width: 100%;
+    }
+    .hero-content { grid-column: 1 / 8; padding-right: 2rem; overflow: hidden; }
+    .hero-visual  { grid-column: 8 / 13; position: relative; }
+
+    .hero-label { display: inline-flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; }
+    .hero-label-line { width: 36px; height: 2px; background: var(--blue); }
+
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 4vw, 4rem);
+      font-weight: 900;
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+      text-transform: uppercase;
+      margin-bottom: 1.75rem;
+      word-break: break-word;
+      overflow-wrap: break-word;
+    }
+    .hero h1 .vol {
+      font-size: 0.28em; vertical-align: super;
+      letter-spacing: 0; font-weight: 700;
+      margin-left: 0.3rem; color: var(--blue);
+    }
+    .hero p { font-size: 1.05rem; color: var(--muted); max-width: 75%; margin-bottom: 2.75rem; line-height: 1.65; }
+    .hero-actions { display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
+
+    .visual-frame {
+      width: 100%; height: 100%; min-height: 420px;
+      border: 1px solid var(--border);
+      padding: 1rem;
+      background: var(--bg-off);
+      box-shadow: 20px 20px 0px 0px rgba(0,0,0,0.04);
+    }
+    .hero-img-container { width: 100%; height: 100%; overflow: hidden; background: var(--text); }
+    .hero-img {
+      width: 100%; height: 100%; object-fit: cover;
+      filter: grayscale(20%) contrast(120%) brightness(0.9);
+      mix-blend-mode: luminosity;
+      opacity: 0.85;
+    }
+    .visual-crosshair { position: absolute; width: 20px; height: 20px; border: 1px solid var(--orange); top: 2rem; right: 2rem; z-index: 10; }
+    .visual-crosshair::before, .visual-crosshair::after { content: ''; position: absolute; background: var(--orange); }
+    .visual-crosshair::before { top: 50%; left: -5px; right: -5px; height: 1px; }
+    .visual-crosshair::after  { left: 50%; top: -5px; bottom: -5px; width: 1px; }
+
+    /* ─────────────────── PALVELUT ─────────────────── */
+    .manifest { background: var(--bg-off); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .manifest-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+    }
+    .manifest-item {
+      background: var(--bg); padding: 2.75rem 2rem;
+      position: relative;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .manifest-item:hover { transform: translateY(-5px); z-index: 10; box-shadow: var(--shadow); border: 1px solid var(--text); }
+    .manifest-num {
+      font-family: var(--font-mono); font-size: 1.25rem; font-weight: 700;
+      color: var(--border); position: absolute; top: 1rem; right: 1.5rem;
+      transition: color 0.3s;
+    }
+    .manifest-item:hover .manifest-num { color: var(--blue); }
+    .manifest-icon { width: 28px; height: 28px; color: var(--text); margin-bottom: 1.75rem; }
+    .manifest-icon svg { width: 100%; height: 100%; }
+    .manifest-title { font-family: var(--font-display); font-size: 1rem; font-weight: 800; text-transform: uppercase; margin-bottom: 0.875rem; line-height: 1.2; }
+    .manifest-desc { font-size: 0.845rem; color: var(--muted); line-height: 1.65; }
+
+    /* ─────────────────── YRITYS ─────────────────── */
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+    .about-text h3 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; text-transform: uppercase; letter-spacing: -0.02em; margin-bottom: 1.25rem; line-height: 1.1; }
+    .about-text p { color: var(--muted); font-size: 0.925rem; line-height: 1.75; margin-bottom: 1rem; }
+
+    .iso-badge-new {
+      display: inline-flex; align-items: center; gap: 1.25rem;
+      border: 2px solid var(--text); padding: 1rem 1.5rem;
+      margin: 1.5rem 0 2rem; box-shadow: var(--shadow);
+    }
+    .badge-label { font-family: var(--font-mono); font-size: 0.65rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; }
+    .badge-title { font-family: var(--font-display); font-size: 1.2rem; font-weight: 900; letter-spacing: -0.02em; color: var(--blue); margin-top: 0.15rem; }
+
+    .stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; margin-top: 1rem; }
+    .stat-box { border-top: 3px solid var(--orange); padding-top: 0.75rem; }
+    .stat-num { font-family: var(--font-display); font-size: 2rem; font-weight: 900; letter-spacing: -0.04em; line-height: 1; }
+    .stat-lbl { font-family: var(--font-mono); font-size: 0.65rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; margin-top: 0.25rem; }
+
+    .team-grid { display: flex; flex-direction: column; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+    .team-card-new { background: var(--bg); padding: 1.375rem 1.75rem; display: flex; justify-content: space-between; align-items: center; transition: background 0.2s; }
+    .team-card-new:hover { background: var(--bg-off); }
+    .team-role { font-family: var(--font-mono); font-size: 0.65rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.25rem; }
+    .team-name { font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; text-transform: uppercase; letter-spacing: -0.02em; }
+    .team-phone-new { font-family: var(--font-mono); font-size: 0.8rem; color: var(--blue); transition: color 0.2s; white-space: nowrap; }
+    .team-phone-new:hover { color: var(--orange); }
+
+    .about-location {
+      margin-top: 1px; background: var(--bg-off);
+      border: 1px solid var(--border);
+      padding: 1.5rem 1.75rem;
+      box-shadow: var(--shadow);
+    }
+
+    /* ─────────────────── KONEKANTA ─────────────────── */
+    .machinery-section { background: var(--bg-off); }
+    .mach-table-wrap { border: 1px solid var(--border); background: var(--bg); box-shadow: var(--shadow); }
+    .mach-table { width: 100%; border-collapse: collapse; }
+    .mach-table thead tr { background: var(--text); }
+    .mach-table th {
+      color: rgba(255,255,255,0.55); font-family: var(--font-mono);
+      font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.1em;
+      padding: 1rem 1.5rem; text-align: left; font-weight: 400;
+    }
+    .mach-table th:first-child { color: #fff; }
+    .mach-table tbody tr { border-bottom: 1px solid var(--border); transition: background 0.15s; }
+    .mach-table tbody tr:last-child { border-bottom: none; }
+    .mach-table tbody tr:hover { background: var(--bg-off); }
+    .mach-table td { padding: 1.25rem 1.5rem; vertical-align: middle; }
+    .mach-table td.col-name { font-family: var(--font-display); font-weight: 800; font-size: 0.9rem; letter-spacing: -0.01em; border-left: 3px solid var(--orange); text-transform: uppercase; }
+    .spec-tag { display: inline-block; font-family: var(--font-mono); font-size: 0.72rem; background: var(--bg-off); border: 1px solid var(--border); padding: 0.25rem 0.75rem; letter-spacing: 0.02em; }
+
+    /* ─────────────────── TUOTTEET ─────────────────── */
+    .products-category-label {
+      font-family: var(--font-mono); font-size: 0.65rem; text-transform: uppercase;
+      letter-spacing: 0.1em; color: var(--orange); margin-bottom: 1.25rem;
+      padding-bottom: 0.5rem; border-bottom: 1px solid var(--border);
+    }
+    .products-category + .products-category { margin-top: 3rem; }
+    .showcase-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1.25rem; }
+    .showcase-item {
+      position: relative; background: var(--bg); padding: 1.75rem 1.25rem;
+      border: 1px solid var(--border);
+      transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    }
+    .showcase-item:hover { transform: translateY(-4px); z-index: 10; box-shadow: var(--shadow); border-color: var(--text); }
+    .showcase-icon { width: 28px; height: 28px; color: var(--text); margin-bottom: 1rem; }
+    .showcase-icon svg { width: 100%; height: 100%; }
+    .showcase-num {
+      font-family: var(--font-mono); font-size: 1rem; font-weight: 700;
+      color: var(--border); position: absolute; top: 0.75rem; right: 1rem;
+      transition: color 0.3s;
+    }
+    .showcase-item:hover .showcase-num { color: var(--blue); }
+    .showcase-title { font-family: var(--font-display); font-weight: 800; font-size: 0.82rem; text-transform: uppercase; letter-spacing: -0.01em; margin-bottom: 0.5rem; line-height: 1.2; }
+    .showcase-desc { font-size: 0.78rem; color: var(--muted); line-height: 1.6; }
+
+    .products-more {
+      margin-top: 3rem; padding: 1.5rem 2rem;
+      background: var(--bg-off); border: 1px solid var(--border);
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 1rem;
+    }
+
+    /* ─────────────────── REFERENSSIT ─────────────────── */
+    .references-section { background: var(--bg-off); }
+    .ref-featured-new {
+      background: var(--text); color: #fff;
+      padding: 3rem; margin-bottom: 1px;
+      border-left: 5px solid var(--orange);
+      box-shadow: var(--shadow);
+    }
+    .ref-client-label { font-family: var(--font-mono); font-size: 0.65rem; color: var(--orange); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.625rem; }
+    .ref-featured-new h3 { font-family: var(--font-display); font-size: 2.5rem; font-weight: 900; letter-spacing: -0.04em; text-transform: uppercase; margin-bottom: 0.75rem; }
+    .ref-featured-new p { color: rgba(255,255,255,0.5); font-size: 0.9rem; line-height: 1.7; max-width: 560px; }
+
+    .ref-projects-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 2rem; }
+    .ref-project-card { background: var(--bg); padding: 2.25rem 2rem; transition: background 0.2s; }
+    .ref-project-card:hover { background: var(--bg-off); }
+    .ref-year { font-family: var(--font-display); font-size: 3rem; font-weight: 900; letter-spacing: -0.05em; color: var(--border); line-height: 1; margin-bottom: 0.75rem; transition: color 0.2s; }
+    .ref-project-card:hover .ref-year { color: var(--blue); }
+    .ref-project-card h4 { font-family: var(--font-display); font-weight: 800; font-size: 0.95rem; text-transform: uppercase; letter-spacing: -0.01em; margin-bottom: 0.375rem; }
+    .ref-client-tag { font-family: var(--font-mono); font-size: 0.7rem; color: var(--muted); }
+    .ref-location-tag { font-family: var(--font-mono); font-size: 0.65rem; color: var(--muted); margin-top: 0.75rem; }
+
+    /* ─────────────────── YHTEYSTIEDOT ─────────────────── */
+    .contact-section { background: var(--bg); }
+    .contact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4rem; }
+    .contact-col h3 {
+      font-family: var(--font-display); font-weight: 900; font-size: 0.8rem;
+      text-transform: uppercase; letter-spacing: 0.08em;
+      margin-bottom: 1.5rem; padding-bottom: 0.75rem;
+      border-bottom: 2px solid var(--border);
+    }
+    .contact-person { margin-bottom: 1.75rem; padding-bottom: 1.75rem; border-bottom: 1px solid var(--border); }
+    .contact-person:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .contact-person-name { font-family: var(--font-display); font-weight: 800; font-size: 0.95rem; text-transform: uppercase; letter-spacing: -0.01em; margin-bottom: 0.15rem; }
+    .contact-person-role { font-family: var(--font-mono); font-size: 0.65rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.5rem; }
+    .contact-link { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.875rem; font-weight: 500; color: var(--blue); transition: color 0.2s; }
+    .contact-link:hover { color: var(--orange); }
+    .contact-link + .contact-link { margin-top: 0.3rem; display: flex; }
+
+    .contact-info-item { display: flex; gap: 0.75rem; align-items: flex-start; margin-bottom: 1.125rem; }
+    .contact-info-item svg { flex-shrink: 0; margin-top: 2px; color: var(--orange); }
+    .contact-info-label { font-family: var(--font-mono); font-size: 0.65rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.2rem; }
+    .contact-info-value { font-size: 0.875rem; font-weight: 500; }
+
+    .map-frame { width: 100%; height: 260px; border: 0; filter: grayscale(30%) contrast(1.05); display: block; }
+
+    /* ─────────────────── TARJOUSPYYNTÖ ─────────────────── */
+    .cta-section { background: var(--text); color: #fff; padding: 7rem 0; border-top: 4px solid var(--orange); }
+    .cta-intro { max-width: 700px; margin-bottom: 4rem; }
+    .cta-intro .meta-text { color: var(--orange); display: block; margin-bottom: 0.75rem; }
+    .cta-title { font-family: var(--font-display); font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 900; letter-spacing: -0.04em; text-transform: uppercase; line-height: 1; margin-bottom: 1.25rem; }
+    .cta-desc { color: rgba(255,255,255,0.45); font-size: 1rem; line-height: 1.65; }
+
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    .form-full { grid-column: 1 / -1; }
+    .form-label { display: block; font-family: var(--font-mono); font-size: 0.65rem; color: rgba(255,255,255,0.45); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.4rem; }
+    .form-input {
+      width: 100%;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: #fff; padding: 0.875rem 1rem;
+      font-family: var(--font-body); font-size: 0.875rem;
+      outline: none; transition: border-color 0.2s;
+    }
+    .form-input:focus { border-color: var(--orange); }
+    .form-input::placeholder { color: rgba(255,255,255,0.2); }
+    .btn-submit {
+      display: flex; align-items: center; justify-content: center;
+      background: var(--orange); color: #fff;
+      padding: 1.125rem 3rem;
+      font-family: var(--font-display); font-weight: 800; font-size: 0.9rem;
+      text-transform: uppercase; letter-spacing: 0.06em;
+      box-shadow: 8px 8px 0px 0px rgba(255,255,255,0.06);
+      transition: all 0.2s; border: none; cursor: pointer; width: 100%;
+    }
+    .btn-submit:hover { transform: translate(-3px,-3px); box-shadow: 12px 12px 0px 0px rgba(255,255,255,0.1); }
+
+    /* ─────────────────── FOOTER ─────────────────── */
+    footer { background: var(--text); color: var(--muted); padding: 5rem 0 2.5rem; border-top: 1px solid rgba(255,255,255,0.07); }
+    .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.2fr; gap: 3rem; margin-bottom: 4rem; }
+    .footer-logo { font-family: var(--font-display); font-weight: 900; font-size: 1.3rem; letter-spacing: -0.04em; color: #fff; margin-bottom: 1.25rem; display: block; }
+    .footer-tagline { font-family: var(--font-mono); font-size: 0.7rem; color: rgba(255,255,255,0.28); line-height: 2; }
+    .footer-col h4 { font-family: var(--font-display); font-weight: 800; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; color: rgba(255,255,255,0.45); margin-bottom: 1.25rem; }
+    .footer-col ul { list-style: none; }
+    .footer-col li { margin-bottom: 0.6rem; }
+    .footer-col a { font-size: 0.845rem; color: rgba(255,255,255,0.38); transition: color 0.2s; }
+    .footer-col a:hover { color: var(--orange); }
+    .foot-info { font-family: var(--font-mono); font-size: 0.72rem; color: rgba(255,255,255,0.32); }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.07); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; font-family: var(--font-mono); font-size: 0.7rem; color: rgba(255,255,255,0.22); }
+
+    /* ── Scrollbar ── */
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: #333333; }
+    ::-webkit-scrollbar-thumb { background: #333; border-radius: 0; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--orange); }
+
+    /* ─────────────────── RESPONSIVE ─────────────────── */
+    @media (max-width: 1200px) {
+      .container { padding: 0 2.5rem; }
+      .hero h1 { font-size: clamp(2.2rem, 4vw, 3.5rem); }
+      .footer-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 1280px) {
+      nav ul { gap: 1.25rem; }
+      .nav-cta { padding: 0.55rem 1rem; font-size: 0.72rem; }
+      .logo { font-size: 1.2rem; }
+    }
+    @media (max-width: 1100px) {
+      nav ul { gap: 0.85rem; }
+      nav a { font-size: 0.72rem; letter-spacing: 0.04em; }
+      .nav-cta { padding: 0.5rem 0.8rem; font-size: 0.68rem; }
+      .logo { font-size: 1.1rem; }
+    }
+    @media (max-width: 1024px) {
+      .manifest-grid { grid-template-columns: repeat(2, 1fr); }
+      .hero-content { grid-column: 1 / -1; }
+      .hero-visual  { grid-column: 1 / -1; min-height: 350px; margin-top: 2.5rem; }
+      .hero h1 { font-size: clamp(2rem, 5vw, 3rem); }
+    }
+    @media (max-width: 992px) {
+      .container { padding: 0 1.5rem; }
+      nav ul, .nav-cta { display: none; }
+      .hamburger-btn { display: flex; }
+      .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .showcase-grid { grid-template-columns: repeat(3, 1fr); }
+      .contact-grid { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+      .stats-row { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      section { padding: 4rem 0; }
+      .container { padding: 0 1.25rem; }
+      .hero { padding-top: 110px; padding-bottom: 3rem; min-height: unset; }
+      .hero h1 { font-size: 3rem; }
+      .hero p { max-width: 100%; }
+      .hero-actions { flex-direction: column; align-items: flex-start; }
+      .manifest-grid { grid-template-columns: 1fr; }
+      .showcase-grid { grid-template-columns: repeat(2, 1fr); }
+      .ref-projects-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .form-grid { grid-template-columns: 1fr; }
+      .cta-title { font-size: 2.25rem; }
+      .section-title { font-size: 2rem; }
+      .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
+      .products-more { flex-direction: column; align-items: flex-start; }
+      .stats-row { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════════════ -->
+<!-- HEADER                                              -->
+<!-- ════════════════════════════════════════════════════ -->
+<header>
+  <div class="container nav-container">
+    <a href="#etusivu" class="logo">KONE<span class="logo-mark">//</span>KUNTTILA</a>
+    <nav>
+      <ul>
+        <li><a href="#etusivu">Etusivu</a></li>
+        <li><a href="#yritys">Yritys</a></li>
+        <li><a href="#palvelut">Palvelut</a></li>
+        <li><a href="#tuotteet">Tuotteet</a></li>
+        <li><a href="#konekanta">Konekanta</a></li>
+        <li><a href="#referenssit">Referenssit</a></li>
+        <li><a href="#yhteystiedot">Yhteystiedot</a></li>
+      </ul>
+    </nav>
+    <div style="display:flex; align-items:center; gap:1rem;">
+      <a href="#quote" class="nav-cta">Pyydä tarjous</a>
+      <button class="hamburger-btn" id="hamburger" aria-label="Valikko">
+        <span id="hb1"></span>
+        <span id="hb2"></span>
+        <span id="hb3"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile drawer -->
+<div class="mobile-drawer" id="mobile-menu">
+  <nav>
+    <ul>
+      <li><a href="#etusivu">Etusivu</a></li>
+      <li><a href="#yritys">Yritys</a></li>
+      <li><a href="#palvelut">Palvelut</a></li>
+      <li><a href="#tuotteet">Tuotteet</a></li>
+      <li><a href="#konekanta">Konekanta</a></li>
+      <li><a href="#referenssit">Referenssit</a></li>
+      <li><a href="#yhteystiedot">Yhteystiedot</a></li>
+    </ul>
+  </nav>
+  <div class="mob-cta-wrap">
+    <a href="#quote" class="nav-cta">Pyydä tarjous</a>
+  </div>
+</div>
+<div class="menu-overlay" id="menu-overlay"></div>
+
+
+<!-- ════════════════════════════════════════════════════ -->
+<!-- HERO                                                -->
+<!-- ════════════════════════════════════════════════════ -->
+<section id="etusivu" class="hero">
+  <div class="container hero-grid">
+
+    <div class="hero-content">
+      <div class="hero-label">
+        <span class="hero-label-line"></span>
+        <span class="meta-text">Perust. 1999 / ISO 9001 / Turku, Finland</span>
+      </div>
+      <h1>Metallitöitä.<br>Automatisointeja.<br>Koneenrakennusta.<span class="vol">KK</span></h1>
+      <p>Konepajamme tekee erilaisia metallialan alihankintatöitä, kuten laitteiden ja koneiden sekä niiden osien suunnittelua, valmistusta ja asennusta, pääasiassa pieniin ja keskisuuriin yrityksiin. Teemme myös erilaisia teollisuuden huolto- ja kunnossapitotöitä.</p>
+      <div class="hero-actions">
+        <a href="#yritys" class="btn-primary">Lue lisää yrityksestämme</a>
+        <a href="#palvelut" class="btn-secondary">Lue lisää palveluistamme</a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="visual-frame">
+        <div class="visual-crosshair"></div>
+        <div class="hero-img-container">
+          <img src="https://www.kone-kunttila.fi/images/photo_bolts.jpg" alt="Metallialan alihankintatyöt — Kone-Kunttila Oy" class="hero-img">
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════ -->
+<!-- PALVELUT                                            -->
+<!-- ════════════════════════════════════════════════════ -->
+<section id="palvelut" class="manifest">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <span class="meta-text" style="color:var(--orange); display:block; margin-bottom:0.4rem;">Konepajatyöt suunnittelusta asennukseen</span>
+        <h2 class="section-title">Palvelut</h2>
+      </div>
+      <span class="meta-text">ISO 9001 · Bureau Veritas</span>
+    </div>
+
+    <div class="manifest-grid">
+
+      <article class="manifest-item">
+        <span class="manifest-num">01</span>
+        <div class="manifest-icon">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
+          </svg>
+        </div>
+        <h3 class="manifest-title">Sorvaus- ja jyrsintätyöt</h3>
+        <p class="manifest-desc">Tarkat CNC- ja manuaalikoneistustyöt metalliosille tilauksesta. Käytössämme ovat kaikki yleisimmät metallialan työkalut ja menetelmät.</p>
+      </article>
+
+      <article class="manifest-item">
+        <span class="manifest-num">02</span>
+        <div class="manifest-icon">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+          </svg>
+        </div>
+        <h3 class="manifest-title">Hitsaus- ja rakennetyöt</h3>
+        <p class="manifest-desc">Kaikki hitsausmenetelmät ja metallirakenteiden valmistus pienistä sarjoista suuriin kokoonpanoihin. Huolehdimme myös asennuksesta ja käyttöönotosta.</p>
+      </article>
+
+      <article class="manifest-item">
+        <span class="manifest-num">03</span>
+        <div class="manifest-icon">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+            <path stroke-linecap="square" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+          </svg>
+        </div>
+        <h3 class="manifest-title">Teollisuuden jigit</h3>
+        <p class="manifest-desc">Räätälöidyt jigit, kiinnittimet ja tuotantolinjojen apuvälineet täsmälliseen valmistukseen. Esim. teippausjigit, kokoonpanojigit ja tarkastusjigit.</p>
+      </article>
+
+      <article class="manifest-item">
+        <span class="manifest-num">04</span>
+        <div class="manifest-icon">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <rect x="2" y="2" width="20" height="20" stroke-width="2" stroke-linecap="square"/>
+            <path stroke-linecap="square" stroke-width="2" d="M7 12h10M12 7v10"/>
+          </svg>
+        </div>
+        <h3 class="manifest-title">Automatisoinnit</h3>
+        <p class="manifest-desc">Teollisuuden työvaiheiden ja työpisteiden automatisointi tuottavuuden ja laadun parantamiseksi.</p>
+      </article>
+
+      <article class="manifest-item">
+        <span class="manifest-num">05</span>
+        <div class="manifest-icon">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+          </svg>
+        </div>
+        <h3 class="manifest-title">Huoltotyöt</h3>
+        <p class="manifest-desc">Erilaiset teollisuuden huoltotyöt nopeasti ja luotettavasti. Huolehdimme laitteiden ja koneiden kunnossapidosta.</p>
+      </article>
+
+      <article class="manifest-item">
+        <span class="manifest-num">06</span>
+        <div class="manifest-icon">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <polyline stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" points="9 12 11 14 15 10"/>
+          </svg>
+        </div>
+        <h3 class="manifest-title">Kunnossapito</h3>
+        <p class="manifest-desc">Tehdas- ja rakennuskunnossapitotyöt sekä laitoshuoltotyöt. Suoritamme myös ennaltaehkäisevää kunnossapitoa.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════ -->
+<!-- YRITYS                                              -->
+<!-- ════════════════════════════════════════════════════ -->
+<section id="yritys">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <span class="meta-text" style="color:var(--orange); display:block; margin-bottom:0.4rem;">Yritysesittely</span>
+        <h2 class="section-title">Kone-Kunttila</h2>
+      </div>
+      <span class="meta-text">Turku, Finland</span>
+    </div>
+
+    <div class="about-grid">
+
+      <!-- Left: Text + ISO + Stats -->
+      <div class="about-text">
+        <h3>Metallialan alihankintatyöt<br>tilauskonepajalta</h3>
+        <p>Kone-Kunttila Oy on metallialan alihankintaa tekevä tilauskonepaja. Yrityksemme toimialana on koneiden, laitteiden ja metallituotteiden suunnitteleminen, valmistaminen ja asentaminen. Suoritamme myös erilaiset tehdas- ja rakennuskunnossapitotyöt sekä laitoshuoltotyöt.</p>
+        <p>Meillä on yli 10 vuoden kokemus erilaisista teollisuuden koneiden ja laitteiden suunnittelu- ja rakennustöistä. Yrityksemme liikevaihto on kasvanut tasaisesti läpi 2000-luvun — vakaan kasvun taustalla ovat etenkin pitkäaikaiset ja vakiintuneet asiakassuhteet.</p>
+
+        <div class="iso-badge-new">
+          <div>
+            <div class="badge-label">Bureau Veritas</div>
+            <div class="badge-title">ISO 9001</div>
+          </div>
+          <div style="width:1px; height:38px; background:var(--border);"></div>
+          <div>
+            <div class="badge-label">Laadunhallintajärjestelmä</div>
+            <div style="font-family:var(--font-mono); font-size:0.78rem; font-weight:700; margin-top:0.2rem;">Varmistettua laatua</div>
+          </div>
+        </div>
+
+        <div class="stats-row">
+          <div class="stat-box">
+            <div class="stat-num">25+</div>
+            <div class="stat-lbl">Vuotta</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num">~10</div>
+            <div class="stat-lbl">Tekijää</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num">1999</div>
+            <div class="stat-lbl">Perustettu</div>
+          </div>
+          <div class="stat-box" style="border-color:var(--blue);">
+            <div class="stat-num" style="color:var(--blue);">ISO</div>
+            <div class="stat-lbl">9001</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Team + Location -->
+      <div>
+        <div class="meta-text" style="margin-bottom:1rem;">Henkilöstö</div>
+        <div class="team-grid">
+          <div class="team-card-new">
+            <div>
+              <div class="team-role">Toimitusjohtaja</div>
+              <div class="team-name">Sami Kunttila</div>
+            </div>
+            <a href="tel:+358400538520" class="team-phone-new">0400 538 520</a>
+          </div>
+          <div class="team-card-new">
+            <div>
+              <div class="team-role">Teknikko / Projektivastaava</div>
+              <div class="team-name">Ari Kunttila</div>
+            </div>
+            <a href="tel:+358400191818" class="team-phone-new">0400 191 818</a>
+          </div>
+          <div class="team-card-new">
+            <div>
+              <div class="team-role">Tuotanto</div>
+              <div class="team-name">Henry Niemelä</div>
+            </div>
+            <a href="tel:+358400865599" class="team-phone-new">0400 865 599</a>
+          </div>
+        </div>
+        <div class="about-location">
+          <div class="meta-text" style="color:var(--orange); margin-bottom:0.75rem;">Sijainti</div>
+          <div style="font-family:var(--font-display); font-weight:900; font-size:1.1rem; text-transform:uppercase; letter-spacing:-0.02em;">Rykmentintie 4</div>
+          <div style="font-family:var(--font-mono); font-size:0.75rem; color:var(--muted); margin-top:0.25rem;">20810 Turku — Vähäheikkilä, Finland</div>
+          <div style="margin-top:0.875rem; font-family:var(--font-mono); font-size:0.72rem; color:var(--muted);">Arkisin klo 7–15.30 (tarvittaessa myös iltaisin ja viikonloppuisin)</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════ -->
+<!-- KONEKANTA                                           -->
+<!-- ════════════════════════════════════════════════════ -->
+<section id="konekanta" class="machinery-section">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <span class="meta-text" style="color:var(--orange); display:block; margin-bottom:0.4rem;">Tuotantokalusto</span>
+        <h2 class="section-title">Konekanta</h2>
+      </div>
+      <span class="meta-text">Vähäheikkilä, Turku</span>
+    </div>
+    <div class="mach-table-wrap">
+      <table class="mach-table">
+        <thead>
+          <tr>
+            <th>Kone</th>
+            <th>Malli</th>
+            <th>Spesifikaatiot</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="col-name">CNC-koneistuskeskus</td>
+            <td style="font-family:var(--font-mono); font-size:0.82rem; color:var(--muted);">Dyna Myte DM 2418LS</td>
+            <td><span class="spec-tag">CNC-koneistus</span></td>
+          </tr>
+          <tr>
+            <td class="col-name">Levyleikkuri</td>
+            <td style="font-family:var(--font-mono); font-size:0.82rem; color:var(--muted);">Baykal HGL 3100×6</td>
+            <td><span class="spec-tag">3100mm × 6mm</span></td>
+          </tr>
+          <tr>
+            <td class="col-name">Särmäyspuristin</td>
+            <td style="font-family:var(--font-mono); font-size:0.82rem; color:var(--muted);">Baykal APH3106×120</td>
+            <td><span class="spec-tag">3106mm / 120t</span></td>
+          </tr>
+          <tr>
+            <td class="col-name">Metallisorvi</td>
+            <td style="font-family:var(--font-mono); font-size:0.82rem; color:var(--muted);">TK 450×1500</td>
+            <td><span class="spec-tag">Ø450mm / 1500mm</span></td>
+          </tr>
+          <tr>
+            <td class="col-name">Metallijyrsin</td>
+            <td style="font-family:var(--font-mono); font-size:0.82rem; color:var(--muted);">—</td>
+            <td><span class="spec-tag">Jyrsintäkoneistus</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════ -->
+<!-- TUOTTEET                                            -->
+<!-- ════════════════════════════════════════════════════ -->
+<section id="tuotteet">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <span class="meta-text" style="color:var(--orange); display:block; margin-bottom:0.4rem;">Tuotevalikoima</span>
+        <h2 class="section-title">Tuotteet</h2>
+      </div>
+      <a href="#quote" class="btn-secondary" style="color:var(--blue); border-color:var(--blue);">Kysy tuotteista</a>
+    </div>
+
+    <!-- Yrityksille -->
+    <div class="products-category">
+      <div class="products-category-label">Tuotevalikoima yrityksille</div>
+      <div class="showcase-grid">
+
+        <div class="showcase-item">
+          <span class="showcase-num">01</span>
+          <div class="showcase-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="1" stroke-width="2" stroke-linecap="square"/><path stroke-width="2" d="M6 7V5a2 2 0 012-2h8a2 2 0 012 2v2"/></svg>
+          </div>
+          <div class="showcase-title">Työpöydät ja työtasot</div>
+          <div class="showcase-desc">Kuten esim. ladontapöydät tuotantolinjoille.</div>
+        </div>
+
+        <div class="showcase-item">
+          <span class="showcase-num">02</span>
+          <div class="showcase-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" stroke-linecap="square" d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg>
+          </div>
+          <div class="showcase-title">Telineet</div>
+          <div class="showcase-desc">Kuten eristesukkatelineet ja muut teollisuustelineet.</div>
+        </div>
+
+        <div class="showcase-item">
+          <span class="showcase-num">03</span>
+          <div class="showcase-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <div class="showcase-title">Erikoistyökalut</div>
+          <div class="showcase-desc">Kuten esim. pneumaattiset langantaivuttimet ja vääntö/taivutustyökalut.</div>
+        </div>
+
+        <div class="showcase-item">
+          <span class="showcase-num">04</span>
+          <div class="showcase-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="square" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <div class="showcase-title">Jigit</div>
+          <div class="showcase-desc">Kuten esim. teippausjigit, kokoonpanojigit ja tarkastusjigit.</div>
+        </div>
+
+        <div class="showcase-item">
+          <span class="showcase-num">05</span>
+          <div class="showcase-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" stroke-linecap="square" d="M4 22V2l4 4 4-4 4 4 4-4v20H4z"/></svg>
+          </div>
+          <div class="showcase-title">Metalliportaat</div>
+          <div class="showcase-desc">Yrityskiinteistöihin suunnitellut metalliportaat.</div>
+        </div>
+
+        <div class="showcase-item">
+          <span class="showcase-num">06</span>
+          <div class="showcase-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" stroke-linecap="square" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="showcase-title">Metallituotteet ulkokäyttöön</div>
+          <div class="showcase-desc">Kuten portit ja puomit yrityksille.</div>
+        </div>
+
+        <div class="showcase-item">
+          <span class="showcase-num">07</span>
+          <div class="showcase-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" stroke-linecap="square" d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+          </div>
+          <div class="showcase-title">Sekoittajat</div>
+          <div class="showcase-desc">Teollisuuden sekoittajat ja sekoituslaitteet.</div>
+        </div>
+
+        <div class="showcase-item">
+          <span class="showcase-num">08</span>
+          <div class="showcase-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke-width="2"/><path stroke-width="2" d="M8 12h8M12 8v8"/></svg>
+          </div>
+          <div class="showcase-title">Tuurnat</div>
+          <div class="showcase-desc">Tuurnat ja painotyökalut metallinmuovaukseen.</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Kotitalouksille -->
+    <div class="products-category">
+      <div class="products-category-label">Tuotevalikoima kotitalouksille</div>
+      <div class="showcase-grid">
+
+        <div class="showcase-item">
+          <span class="showcase-num">09</span>
+          <div class="showcase-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" stroke-linecap="square" d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><path stroke-width="2" d="M9 22V12h6v10"/></svg>
+          </div>
+          <div class="showcase-title">Metalliportaat sisä- ja ulkokäyttöön</div>
+          <div class="showcase-desc">Kotitalouksille suunnitellut metalliportaat sisä- ja ulkotiloihin.</div>
+        </div>
+
+        <div class="showcase-item">
+          <span class="showcase-num">10</span>
+          <div class="showcase-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" stroke-width="2"/><path stroke-width="2" d="M3 9h18M9 3v18"/></svg>
+          </div>
+          <div class="showcase-title">Metallituotteet ulkokäyttöön</div>
+          <div class="showcase-desc">Kuten portit ja aidat kotitalouksille.</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="products-more">
+      <div>
+        <div class="meta-text" style="margin-bottom:0.35rem;">Kaikki tuotteet räätälöidään asiakkaan tarpeiden mukaan</div>
+        <p style="font-size:0.9rem; font-weight:600;">Valmistamme tuotteita sekä yrityksille että kotitalouksille — kysy tarjous juuri sinun tarpeisiisi.</p>
+      </div>
+      <a href="#quote" class="btn-primary" style="font-size:0.8rem; padding:0.875rem 1.75rem; white-space:nowrap;">Kysy lisää</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════ -->
+<!-- REFERENSSIT                                         -->
+<!-- ════════════════════════════════════════════════════ -->
+<section id="referenssit" class="references-section">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <span class="meta-text" style="color:var(--orange); display:block; margin-bottom:0.4rem;">Asiakkaamme</span>
+        <h2 class="section-title">Referenssit</h2>
+      </div>
+      <span class="meta-text">Vuodesta 1999</span>
+    </div>
+
+    <div class="ref-featured-new">
+      <div class="ref-client-label">Pitkäaikainen yhteistyö — Lähes 10 vuoden asiakassuhde</div>
+      <h3>Trafotek Oy</h3>
+      <p>Olemme tehneet alihankintaa turkulaiselle induktiivisia komponentteja valmistavalle Trafotek Oy:lle lähes 10 vuoden ajan. Olemme olleet mukana mm. yrityksen tehdaslayout-muutosten toteutuksessa sekä valmistaneet erilaisia pyöriviä työtasoja ja jigejä. Trafotek on hyödyntänyt yhteistyömme tuloksia myös kansainvälisesti.</p>
+    </div>
+
+    <div class="ref-projects-grid">
+      <div class="ref-project-card">
+        <div class="ref-year">2008</div>
+        <h4>Muuntajasydämen ladonta- ja kääntölaite</h4>
+        <div class="ref-client-tag">Trafotek Oy</div>
+        <div class="ref-location-tag">📍 Turku, Finland</div>
+      </div>
+      <div class="ref-project-card">
+        <div class="ref-year">05–09</div>
+        <h4>Kokoonpano-, kytkentä-, hitsaus-, teippaus-, kaapelointi- ja tarkastusjigejä</h4>
+        <div class="ref-client-tag">Trafotek Suzhou Ltd</div>
+        <div class="ref-location-tag">📍 Suzhou, Kiina</div>
+      </div>
+    </div>
+
+    <p class="meta-text">
+      Lisätietoa referensseistämme saat soittamalla Sami Kunttilalle &nbsp;
+      <a href="tel:+358400538520" style="color:var(--blue);">0400 538 520</a>
+    </p>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════ -->
+<!-- YHTEYSTIEDOT                                        -->
+<!-- ════════════════════════════════════════════════════ -->
+<section id="yhteystiedot" class="contact-section">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <span class="meta-text" style="color:var(--orange); display:block; margin-bottom:0.4rem;">Ota yhteyttä</span>
+        <h2 class="section-title">Yhteystiedot</h2>
+      </div>
+      <span class="meta-text">Arkisin klo 7–15.30</span>
+    </div>
+
+    <div class="contact-grid">
+
+      <!-- Staff -->
+      <div class="contact-col">
+        <h3>Henkilöstö</h3>
+        <div class="contact-person">
+          <div class="contact-person-name">Sami Kunttila</div>
+          <div class="contact-person-role">Toimitusjohtaja</div>
+          <a href="tel:+358400538520" class="contact-link">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 3.5 9.76 19.79 19.79 0 0 1 .47 1.12 2 2 0 0 1 2.46 0h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L6.91 7.43a16 16 0 0 0 6.62 6.62l.8-.8a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            0400 538 520
+          </a>
+          <a href="mailto:sami.kunttila@kone-kunttila.fi" class="contact-link" style="display:flex; margin-top:0.3rem;">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            sami.kunttila@kone-kunttila.fi
+          </a>
+        </div>
+        <div class="contact-person">
+          <div class="contact-person-name">Ari Kunttila</div>
+          <div class="contact-person-role">Teknikko / Projektivastaava</div>
+          <a href="tel:+358400191818" class="contact-link">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 3.5 9.76 19.79 19.79 0 0 1 .47 1.12 2 2 0 0 1 2.46 0h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L6.91 7.43a16 16 0 0 0 6.62 6.62l.8-.8a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            0400 191 818
+          </a>
+          <a href="mailto:ari.kunttila@kone-kunttila.fi" class="contact-link" style="display:flex; margin-top:0.3rem;">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            ari.kunttila@kone-kunttila.fi
+          </a>
+        </div>
+        <div class="contact-person">
+          <div class="contact-person-name">Henry Niemelä</div>
+          <div class="contact-person-role">Tuotanto</div>
+          <a href="tel:+358400865599" class="contact-link">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 3.5 9.76 19.79 19.79 0 0 1 .47 1.12 2 2 0 0 1 2.46 0h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L6.91 7.43a16 16 0 0 0 6.62 6.62l.8-.8a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            0400 865 599
+          </a>
+          <a href="mailto:henry.niemela@kone-kunttila.fi" class="contact-link" style="display:flex; margin-top:0.3rem;">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            henry.niemela@kone-kunttila.fi
+          </a>
+        </div>
+      </div>
+
+      <!-- Company info -->
+      <div class="contact-col">
+        <h3>Yritystiedot</h3>
+        <div class="contact-info-item">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div>
+            <div class="contact-info-label">Osoite</div>
+            <div class="contact-info-value">Rykmentintie 4, 20810 Turku</div>
+            <div style="font-size:0.78rem; color:var(--muted); margin-top:0.1rem;">Vähäheikkilä, Turku</div>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <div>
+            <div class="contact-info-label">Sähköposti</div>
+            <a href="mailto:info@kone-kunttila.fi" class="contact-info-value" style="color:var(--blue);">info@kone-kunttila.fi</a>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <div>
+            <div class="contact-info-label">Aukioloajat</div>
+            <div class="contact-info-value">Arkisin klo 7–15.30</div>
+            <div style="font-size:0.78rem; color:var(--muted); margin-top:0.1rem;">Tarvittaessa myös iltaisin ja viikonloppuisin</div>
+          </div>
+        </div>
+        <div style="border-top:1px solid var(--border); padding-top:1rem; margin-top:0.25rem;">
+          <span class="meta-text">Y-tunnus: <strong style="color:var(--text);">1553007-1</strong></span>
+        </div>
+      </div>
+
+      <!-- Map -->
+      <div class="contact-col">
+        <h3>Sijainti</h3>
+        <iframe class="map-frame"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1984!2d22.247!3d60.453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x468c76c49c07af17%3A0x5b1b8d9e5b1f5f5f!2sRykmentintie%204%2C%2020810%20Turku!5e0!3m2!1sfi!2sfi!4v1"
+          allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Kone-Kunttila sijainti">
+        </iframe>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════ -->
+<!-- TARJOUSPYYNTÖ                                       -->
+<!-- ════════════════════════════════════════════════════ -->
+<section id="quote" class="cta-section">
+  <div class="container">
+    <div class="cta-intro">
+      <span class="meta-text" style="color:var(--orange); display:block; margin-bottom:0.75rem;">Tarjouspyyntö</span>
+      <h2 class="cta-title">Pyydä tarjous!</h2>
+      <p class="cta-desc">Lähetä tarjouspyyntösi — kerro mitä tarvitset ja otamme sinuun yhteyttä. Voimme myös sopia tapaamisen ennen tarjouksen tekemistä.</p>
+    </div>
+
+    <form name="tarjouspyynto" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="tarjouspyynto">
+      <p style="display:none;"><input name="bot-field"></p>
+
+      <div class="form-grid">
+        <div>
+          <label class="form-label" for="nimi">Nimi *</label>
+          <input type="text" id="nimi" name="nimi" required class="form-input" placeholder="Etunimi Sukunimi">
+        </div>
+        <div>
+          <label class="form-label" for="yritys">Yritys</label>
+          <input type="text" id="yritys" name="yritys" class="form-input" placeholder="Yrityksen nimi">
+        </div>
+        <div>
+          <label class="form-label" for="email">Sähköposti *</label>
+          <input type="email" id="email" name="email" required class="form-input" placeholder="sähköposti@yritys.fi">
+        </div>
+        <div>
+          <label class="form-label" for="puhelin">Puhelin *</label>
+          <input type="tel" id="puhelin" name="puhelin" required class="form-input" placeholder="0400 000 000">
+        </div>
+        <div class="form-full">
+          <label class="form-label" for="laite">Laite / osa / palvelu *</label>
+          <textarea id="laite" name="laite" required rows="3" class="form-input" style="resize:vertical;" placeholder="Kuvaile valmistettava / kunnostettava / huollettava laite, osa tai tilattava palvelu..."></textarea>
+        </div>
+        <div class="form-full">
+          <label class="form-label" for="lopputulos">Haluttu lopputulos</label>
+          <textarea id="lopputulos" name="lopputulos" rows="3" class="form-input" style="resize:vertical;" placeholder="Mikä on ongelma ja millainen lopputulos halutaan?"></textarea>
+        </div>
+        <div>
+          <label class="form-label" for="aikataulu">Aikataulu</label>
+          <input type="text" id="aikataulu" name="aikataulu" class="form-input" placeholder="Toivottu toimitusaika tai deadline...">
+        </div>
+        <div>
+          <label class="form-label" for="lisatiedot">Lisätiedot</label>
+          <input type="text" id="lisatiedot" name="lisatiedot" class="form-input" placeholder="Materiaalit, toleranssit, erityisvaatimukset...">
+        </div>
+        <div class="form-full">
+          <button type="submit" class="btn-submit">Lähetä tarjouspyyntö →</button>
+        </div>
+      </div>
+
+      <p class="meta-text" style="margin-top:1.25rem; text-align:center; color:rgba(255,255,255,0.28);">
+        Tarjous lähetetään sähköpostiosoitteeseesi. &nbsp;
+        <a href="mailto:info@kone-kunttila.fi" style="color:rgba(255,255,255,0.45);">info@kone-kunttila.fi</a>
+      </p>
+    </form>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════ -->
+<!-- FOOTER                                              -->
+<!-- ════════════════════════════════════════════════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+
+      <div class="footer-col">
+        <a href="#etusivu" class="footer-logo">KONE<span style="color:var(--blue);">//</span>KUNTTILA</a>
+        <div class="footer-tagline">
+          Metallitöitä.<br>
+          Automatisointeja.<br>
+          Koneenrakennusta.<br><br>
+          Turku, Finland · Est. 1999
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Palvelut</h4>
+        <ul>
+          <li><a href="#palvelut">CNC-koneistus</a></li>
+          <li><a href="#palvelut">Hitsaus &amp; Rakennetyöt</a></li>
+          <li><a href="#palvelut">Automatisoinnit</a></li>
+          <li><a href="#palvelut">Huolto &amp; Kunnossapito</a></li>
+          <li><a href="#palvelut">Teollisuuden jigit</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Yritys</h4>
+        <ul>
+          <li><a href="#yritys">Yritysesittely</a></li>
+          <li><a href="#tuotteet">Tuotteet</a></li>
+          <li><a href="#konekanta">Konekanta</a></li>
+          <li><a href="#referenssit">Referenssit</a></li>
+          <li><a href="#quote">Pyydä tarjous</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Yhteystiedot</h4>
+        <ul>
+          <li class="foot-info">Rykmentintie 4, 20810 Turku</li>
+          <li class="foot-info" style="margin-bottom:0.75rem;">Arkisin klo 7–15.30</li>
+          <li><a href="mailto:info@kone-kunttila.fi" style="color:rgba(255,255,255,0.55);">info@kone-kunttila.fi</a></li>
+          <li><a href="tel:+358400538520" style="color:rgba(255,255,255,0.55);">0400 538 520</a></li>
+        </ul>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 KONE-KUNTTILA OY · Y-TUNNUS: 1553007-1</span>
+      <span>VERKKOSIVUT: AA STUDIO</span>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ════════════════════════════════════════════════════ -->
+<!-- JAVASCRIPT                                          -->
+<!-- ════════════════════════════════════════════════════ -->
+<script>
+  /* ── Mobile menu ── */
+  const hamburger  = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const overlay    = document.getElementById('menu-overlay');
+  const hb1 = document.getElementById('hb1');
+  const hb2 = document.getElementById('hb2');
+  const hb3 = document.getElementById('hb3');
+  let menuOpen = false;
+
+  function toggleMenu(open) {
+    menuOpen = open !== undefined ? open : !menuOpen;
+    if (menuOpen) {
+      mobileMenu.classList.add('open');
+      overlay.classList.add('open');
+      hb1.style.transform = 'rotate(45deg) translate(5px, 5px)';
+      hb2.style.opacity   = '0';
+      hb3.style.transform = 'rotate(-45deg) translate(5px, -5px)';
+      document.body.style.overflow = 'hidden';
+    } else {
+      mobileMenu.classList.remove('open');
+      overlay.classList.remove('open');
+      hb1.style.transform = '';
+      hb2.style.opacity   = '';
+      hb3.style.transform = '';
+      document.body.style.overflow = '';
+    }
+  }
+
+  hamburger.addEventListener('click', () => toggleMenu());
+  overlay.addEventListener('click', () => toggleMenu(false));
+  document.querySelectorAll('.mobile-drawer a').forEach(a => {
+    a.addEventListener('click', () => toggleMenu(false));
+  });
+
+  /* ── Smooth scroll (80px header offset) ── */
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (!target) return;
+      e.preventDefault();
+      window.scrollTo({
+        top: target.getBoundingClientRect().top + window.scrollY - 80,
+        behavior: 'smooth'
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
